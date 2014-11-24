@@ -1,1 +1,10 @@
 C:\Users\achawla\Documents\Courses\RAD_C#_F2013\Lesson9_SimpleFileRead1\Lesson9_SimpleFileRead1\bin\Debug\Lesson9_SimpleFileRead1.exe.config
+I:\GITHUB\COMP1004-Lesson12\Lesson9_SimpleFileRead1\Lesson9_SimpleFileRead1\bin\Debug\Lesson9_SimpleFileRead1.exe.config
+I:\GITHUB\COMP1004-Lesson12\Lesson9_SimpleFileRead1\Lesson9_SimpleFileRead1\bin\Debug\Lesson9_SimpleFileRead1.exe
+I:\GITHUB\COMP1004-Lesson12\Lesson9_SimpleFileRead1\Lesson9_SimpleFileRead1\bin\Debug\Lesson9_SimpleFileRead1.pdb
+I:\GITHUB\COMP1004-Lesson12\Lesson9_SimpleFileRead1\Lesson9_SimpleFileRead1\obj\Debug\Lesson9_SimpleFileRead1.csprojResolveAssemblyReference.cache
+I:\GITHUB\COMP1004-Lesson12\Lesson9_SimpleFileRead1\Lesson9_SimpleFileRead1\obj\Debug\Lesson9_SimpleFileRead1.DisplayForm.resources
+I:\GITHUB\COMP1004-Lesson12\Lesson9_SimpleFileRead1\Lesson9_SimpleFileRead1\obj\Debug\Lesson9_SimpleFileRead1.Properties.Resources.resources
+I:\GITHUB\COMP1004-Lesson12\Lesson9_SimpleFileRead1\Lesson9_SimpleFileRead1\obj\Debug\Lesson9_SimpleFileRead1.csproj.GenerateResource.Cache
+I:\GITHUB\COMP1004-Lesson12\Lesson9_SimpleFileRead1\Lesson9_SimpleFileRead1\obj\Debug\Lesson9_SimpleFileRead1.exe
+I:\GITHUB\COMP1004-Lesson12\Lesson9_SimpleFileRead1\Lesson9_SimpleFileRead1\obj\Debug\Lesson9_SimpleFileRead1.pdb

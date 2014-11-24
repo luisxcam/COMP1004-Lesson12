@@ -36,7 +36,8 @@ namespace Lesson9_SimpleFileWrite1
             // Save the record to the end of the File.
 
             string FileName = "TextFile.txt";
-            string StringToWrite = NameTextBox.Text + "\n" + PhoneTextBox.Text + "\n";
+            //string StringToWrite = NameTextBox.Text + "\n" + PhoneTextBox.Text + "\n";
+            string StringToWrite = NameTextBox.Text + Environment.NewLine + PhoneTextBox.Text + Environment.NewLine;
 
             // This line opens the file, appends to the end of the file and closes it.
             File.AppendAllText(FileName, StringToWrite);
