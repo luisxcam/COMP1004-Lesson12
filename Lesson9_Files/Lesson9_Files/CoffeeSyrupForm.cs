@@ -22,7 +22,7 @@ namespace Lesson9_Files
     {
         //variable definition
         private StreamReader coffeeStreamReader;
-        private StreamReader coffeeStreamWriter;
+        private StreamWriter coffeeStreamWriter;
         private Boolean isDirtyBoolean = false;
 
         public CoffeeSyrupForm()
@@ -269,6 +269,44 @@ namespace Lesson9_Files
 
         private void saveFileToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //show a save dialog box and save the coffee flavours
+            DialogResult responseDialogResult;
+
+            //Check if it is open, close if opened
+            if (coffeeStreamWriter != null)
+                coffeeStreamWriter.Close();
+
+            //of the file open dialog box
+            saveFileDialog1.InitialDirectory = Directory.GetCurrentDirectory();
+            saveFileDialog1.FileName = "CoffeeFlavour";
+            saveFileDialog1.DefaultExt = "txt";
+            saveFileDialog1.Title = "Save file";
+            saveFileDialog1.Filter = "TextFiles(*.txt)|*.txt|All Files(*.*)|*.*";
+
+            //show the save dialog and get the user's answer
+            responseDialogResult = saveFileDialog1.ShowDialog();
+
+            //check the answer to proceed
+            if (responseDialogResult == System.Windows.Forms.DialogResult.OK) {
+                try {
+                    coffeeStreamWriter = new StreamWriter(saveFileDialog1.FileName);
+
+                    //copy the coffee flavours to the file
+                    foreach (Object coffee in coffeeComboBox.Items)
+                    {
+                        Console.WriteLine(coffee.ToString());
+                        coffeeStreamWriter.WriteLine(coffee.ToString());
+                    }
+                }
+                catch (Exception ex) {
+                    MessageBox.Show(ex.Message, "Error in creating file", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            else
+            {
+                //not defined...
+            }
+
 
         }
 
@@ -327,11 +365,30 @@ namespace Lesson9_Files
 
         private void CoffeeSyrupForm_FormClosing(object sender, FormClosingEventArgs e)
         {
+            //ensure changes were made
+            DialogResult responseDialogResult;
+            if (isDirtyBoolean)
+            {
+                responseDialogResult = MessageBox.Show("Coffee list has changed. Do you want to save changes?", "Save coffee List", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (responseDialogResult == System.Windows.Forms.DialogResult.Yes)
+                {
+                    saveFileToolStripMenuItem_Click(sender, e);
+                }
+            }
+            
+
             //close files open
             if (coffeeStreamReader != null)
                 coffeeStreamReader.Close();
             if (coffeeStreamWriter != null)
                 coffeeStreamWriter.Close();
+        }
+
+        private void CoffeeSyrupForm_Load(object sender, EventArgs e)
+        {
+            //show the open file menu when the form loads
+            openFileToolStripMenuItem_Click(sender, e);
         }
     }
 }

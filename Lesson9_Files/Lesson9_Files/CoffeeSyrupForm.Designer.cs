@@ -335,6 +335,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "R \'n R for Reading and Refreshment";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CoffeeSyrupForm_FormClosing);
+            this.Load += new System.EventHandler(this.CoffeeSyrupForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
