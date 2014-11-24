@@ -10,6 +10,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,6 +20,11 @@ namespace Lesson9_Files
 {
     public partial class CoffeeSyrupForm : Form
     {
+        //variable definition
+        private StreamReader coffeeStreamReader;
+        private StreamReader coffeeStreamWriter;
+        private Boolean isDirtyBoolean = false;
+
         public CoffeeSyrupForm()
         {
             InitializeComponent();
@@ -66,6 +72,7 @@ namespace Lesson9_Files
                     //add the flavour
                     coffeeComboBox.Items.Add(coffeeComboBox.Text);
                     coffeeComboBox.Text = "";
+                    isDirtyBoolean = true;
                 }
 
 
@@ -96,6 +103,7 @@ namespace Lesson9_Files
             {
                 //coffeeComboBox.Items.RemoveAt(coffeeComboBox.SelectedIndex);
                 coffeeComboBox.Items.Remove(coffeeComboBox.Items[coffeeComboBox.SelectedIndex]);
+                isDirtyBoolean = true;
 
             }
 
@@ -112,6 +120,7 @@ namespace Lesson9_Files
             if (confirm == System.Windows.Forms.DialogResult.Yes)
             {
                 coffeeComboBox.Items.Clear();
+                isDirtyBoolean = true;
             }
 
 
@@ -256,6 +265,73 @@ namespace Lesson9_Files
                     MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 coffeeComboBox.Focus();
             }
+        }
+
+        private void saveFileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void openFileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //show the open file dialog and allow the user to choose
+            DialogResult responseDialogResult;
+            String coffeeNameString;
+
+            //set the properties of the file is already open
+            if (coffeeStreamReader != null)
+                coffeeStreamReader.Close();
+
+            //of the file open dialog box
+            openFileDialog1.InitialDirectory = Directory.GetCurrentDirectory();
+            openFileDialog1.FileName = "CoffeeFlavour.txt";
+            openFileDialog1.Title = "Select file or directory";
+            openFileDialog1.Filter = "TextFiles(*.txt)|*.txt|All Files(*.*)|*.*";
+
+            //show it
+            responseDialogResult = openFileDialog1.ShowDialog();
+
+            //make sure that cancel was not selected
+            if (responseDialogResult != System.Windows.Forms.DialogResult.Cancel)
+            {
+                //open the file
+                try {
+                    coffeeStreamReader = new StreamReader(openFileDialog1.FileName);
+
+                    //populate the coffee flavours
+                    coffeeComboBox.Items.Clear();
+
+                    //populate the coffee flavours
+                    ///while the file is not done reading
+                    while (coffeeStreamReader.Peek() != -1)
+                    {
+                        coffeeNameString = coffeeStreamReader.ReadLine();
+                        coffeeComboBox.Items.Add(coffeeNameString);
+                    }
+
+                    coffeeStreamReader.Close();
+                }
+                catch (FileNotFoundException ex) {
+                    MessageBox.Show("File not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                catch (Exception ex) {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                //close the application
+                //this.Close();
+            }
+        }
+
+        private void CoffeeSyrupForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //close files open
+            if (coffeeStreamReader != null)
+                coffeeStreamReader.Close();
+            if (coffeeStreamWriter != null)
+                coffeeStreamWriter.Close();
         }
     }
 }

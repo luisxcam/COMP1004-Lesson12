@@ -1,2 +1,11 @@
 C:\Users\achawla\Documents\Courses\RAD_C#_F2013\Lesson9_Files\Lesson9_Files\bin\Debug\Lesson9_Files.exe.config
 I:\GITHUB\COMP1004-Lesson12\Lesson9_Files\Lesson9_Files\bin\Debug\Lesson9_Files.exe.config
+I:\GITHUB\COMP1004-Lesson12\Lesson9_Files\Lesson9_Files\bin\Debug\Lesson9_Files.exe
+I:\GITHUB\COMP1004-Lesson12\Lesson9_Files\Lesson9_Files\bin\Debug\Lesson9_Files.pdb
+I:\GITHUB\COMP1004-Lesson12\Lesson9_Files\Lesson9_Files\obj\Debug\Lesson9_Files.csprojResolveAssemblyReference.cache
+I:\GITHUB\COMP1004-Lesson12\Lesson9_Files\Lesson9_Files\obj\Debug\Lesson9_Files.AboutBox1.resources
+I:\GITHUB\COMP1004-Lesson12\Lesson9_Files\Lesson9_Files\obj\Debug\Lesson9_Files.CoffeeSyrupForm.resources
+I:\GITHUB\COMP1004-Lesson12\Lesson9_Files\Lesson9_Files\obj\Debug\Lesson9_Files.Properties.Resources.resources
+I:\GITHUB\COMP1004-Lesson12\Lesson9_Files\Lesson9_Files\obj\Debug\Lesson9_Files.csproj.GenerateResource.Cache
+I:\GITHUB\COMP1004-Lesson12\Lesson9_Files\Lesson9_Files\obj\Debug\Lesson9_Files.exe
+I:\GITHUB\COMP1004-Lesson12\Lesson9_Files\Lesson9_Files\obj\Debug\Lesson9_Files.pdb
