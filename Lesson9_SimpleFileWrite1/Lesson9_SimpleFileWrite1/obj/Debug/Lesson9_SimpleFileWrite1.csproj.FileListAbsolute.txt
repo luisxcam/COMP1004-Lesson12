@@ -1,0 +1,9 @@
+C:\Users\achawla\Documents\Courses\RAD_C#_F2013\Lesson9_SimpleFileWrite1\Lesson9_SimpleFileWrite1\bin\Debug\Lesson9_SimpleFileWrite1.exe.config
+C:\Users\achawla\Documents\Courses\RAD_C#_F2013\Lesson9_SimpleFileWrite1\Lesson9_SimpleFileWrite1\bin\Debug\Lesson9_SimpleFileWrite1.exe
+C:\Users\achawla\Documents\Courses\RAD_C#_F2013\Lesson9_SimpleFileWrite1\Lesson9_SimpleFileWrite1\bin\Debug\Lesson9_SimpleFileWrite1.pdb
+C:\Users\achawla\Documents\Courses\RAD_C#_F2013\Lesson9_SimpleFileWrite1\Lesson9_SimpleFileWrite1\obj\Debug\Lesson9_SimpleFileWrite1.csprojResolveAssemblyReference.cache
+C:\Users\achawla\Documents\Courses\RAD_C#_F2013\Lesson9_SimpleFileWrite1\Lesson9_SimpleFileWrite1\obj\Debug\Lesson9_SimpleFileWrite1.PhoneForm.resources
+C:\Users\achawla\Documents\Courses\RAD_C#_F2013\Lesson9_SimpleFileWrite1\Lesson9_SimpleFileWrite1\obj\Debug\Lesson9_SimpleFileWrite1.Properties.Resources.resources
+C:\Users\achawla\Documents\Courses\RAD_C#_F2013\Lesson9_SimpleFileWrite1\Lesson9_SimpleFileWrite1\obj\Debug\Lesson9_SimpleFileWrite1.csproj.GenerateResource.Cache
+C:\Users\achawla\Documents\Courses\RAD_C#_F2013\Lesson9_SimpleFileWrite1\Lesson9_SimpleFileWrite1\obj\Debug\Lesson9_SimpleFileWrite1.exe
+C:\Users\achawla\Documents\Courses\RAD_C#_F2013\Lesson9_SimpleFileWrite1\Lesson9_SimpleFileWrite1\obj\Debug\Lesson9_SimpleFileWrite1.pdb
